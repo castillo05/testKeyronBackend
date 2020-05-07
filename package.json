@@ -1,0 +1,22 @@
+{
+  "name": "backendkeiron",
+  "version": "1.0.0",
+  "description": "Test para Keiron backend Tickets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Castillo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "sequelize-cli": "^5.5.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "express": "^4.17.1",
+    "sequelize": "^5.21.7"
+  }
+}
