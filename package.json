@@ -4,7 +4,10 @@
   "description": "Test para Keiron backend Tickets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/babel src --watch --out-dir dist | nodemon dist/index.js",
+    "start": "nodemon dist/index.js",
+    "watch": "babel-watch dist"
   },
   "author": "Jorge Castillo",
   "license": "ISC",
@@ -12,11 +15,15 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
+    "nodemon": "^2.0.3",
     "sequelize-cli": "^5.5.1"
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
+    "bcrypt": "^4.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mysql2": "^2.1.0",
     "sequelize": "^5.21.7"
   }
 }
