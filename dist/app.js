@@ -2,6 +2,10 @@
 
 var _express = _interopRequireDefault(require("express"));
 
+var _users = _interopRequireDefault(require("./endPoints/users"));
+
+var _tickets = _interopRequireDefault(require("./endPoints/tickets"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const app = (0, _express.default)();
@@ -17,6 +21,8 @@ app.use((req, res, next) => {
   res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
   next();
 });
+app.use('/api', _users.default);
+app.use('/api', _tickets.default);
 app.use('/api', (req, res) => {
   res.status(200).json({
     message: 'Bienvenido a la Api Keyron'

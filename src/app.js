@@ -1,5 +1,8 @@
 import express from 'express';
 
+import users from './endPoints/users';
+import tickets from './endPoints/tickets';
+
 const app=express();
 
 app.use(express.urlencoded({extended:true}));
@@ -13,10 +16,13 @@ app.use((req,res,next)=>{
 	res.header('Allow','GET, POST, OPTIONS, PUT, DELETE');
 	next();
 });
-
+app.use('/api', users);
+app.use('/api',tickets);
 app.use('/api',(req, res)=>{
     res.status(200).json({message:'Bienvenido a la Api Keyron'})
 })
+
+
 
 
 

@@ -5,7 +5,9 @@ module.exports=(sequelize,DataTypes)=>{
         nombre:DataTypes.STRING,
         mail: DataTypes.STRING,
         pass: DataTypes.STRING 
-    },{});
+    },{
+        timestamps:false
+    });
 
     users.associate=(models)=>{
         // Asociando Roles con usuarios
